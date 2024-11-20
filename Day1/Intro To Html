@@ -1,0 +1,14 @@
+1. Html is a hyper text markup language.
+2. Tim Berners Lee introduced html in 1991.
+3. Before introducing html, people used msdocs. To make people easier he introduced HTML.
+4. HTML is not a programming language. It's Markup language.
+5. Markup language is used to structure the content inside a browser. 
+6. HTML is user-friendly, very light weight, easy to learn, easy to integrate with all browsers.
+7. IDEs: Integrated development Environment. (vs code, Eclipse, JetBrains IntelliJ-used for java,kotlin).
+8. webStrom,Brackets, - specially used for full stack. 
+9. cloud based IDE's - Replit, Gitpod, AWS cloud9 ( for fullstack development).
+10. Use .html extension while create a html file.
+11. Vscode extensions for coding: Auto close tag, Auto rename tag, code runner, code spell checker, live server, prettier-code formatter, Autosave
+12. Vscode setting - default formatter - prettier code formatter, autosave - onFocusChange, font-size, tab space - 4
+13. !Enter to get boiler code of html.
+14. refer html notes for more.

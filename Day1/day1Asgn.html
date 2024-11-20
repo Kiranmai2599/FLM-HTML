@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div  {
+            margin: 10px;
+            padding: 16px;
+            border: 1px solid rgb(220, 101, 101);
+        }
+        table,tr,td{
+            border: 1px solid rgb(231, 7, 157);
+            border-collapse: collapse;
+        }
+        label{
+            display: inline-block;
+            width: 130px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body> 
+
+    <div style="display: none;" title="Question 3">
+        <table>
+            <thead>
+                <tr>
+                    <td>Sl.No</td>
+                    <td>Full name</td>
+                    <td>Position</td>
+                    <td>Salary</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bill Gates</td>
+                    <td>Founder Microsoft</td>
+                    <td>$1000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Steve Jobs</td>
+                    <td>Founder Apple</td>
+                    <td>$1200</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Larry page</td>
+                    <td>Founder google</td>
+                    <td>$1100</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Mark Zuckeberg</td>
+                    <td>Founder Facebook</td>
+                    <td>$1300</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div style="display: block;" title="Question 2">
+        <img src="working_Woman_masai_banner.jpg" alt="working woman" width="70%" />
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>We will be learning folllowing this week: </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day1</th>
+                    <th>Day2</th>
+                    <th>Day3</th>
+                    <th>Day4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Linux1</td>
+                    <td>HTML</td>
+                    <td>Linux2</td>
+                    <td>Linux3</td>
+                </tr>
+                <tr>
+                    <td>Git 1</td>
+                    <td>CSS</td>
+                    <td>Git 2</td>
+                    <td>Bootstrap</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br/>
+        <br/>
+        <p>If we want to contact me fill this form:</p>
+        <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter Name"/><br/>
+            <label for ="phone-no">Phone No.</label>
+            <input  maxlength="10" minlength="10" required type="tel" pattern="[0-9]{10}" id="phone-no" placeholder="Enter mobile Number"/><br/>
+            <label for="email">Email id</label>
+            <input id="email" type="email" placeholder="Enter Email"/> <br/>
+        </form>
+
+        <h1>The following are important to be a programmer: </h1>
+        <ul>
+            <li>A Problem solving mindset</li>
+            <li>consistency</li>
+            <ul>
+                <li>Clean code</li>
+                <li>Thorough Knowledge of core concepts</li>
+                <li>Readable code</li>
+            </ul>
+            <li>
+                speed
+            </li>
+        </ul>
+    </div>
+    <div style="display: none;" title="question1">
+    <div>
+        <b>Bold- this is b tag</b>
+        <p>The b tag HTML element is used to draw the reader's attention to the element's contents, which are not otherwise granted special importance. </p>
+        <p>However, you should not use b tag for styling text or granting importance. If you wish to create boldface text, you should use the CSS font-weight property. If you wish to indicate an element is of special importance, you should use the strong element.</p>
+    </div>
+    <div>
+        <i>I tag : The Idiomatic Text element</i><br>
+        <p>The i HTML element represents a range of text that is set off from the normal text for some reason, such as idiomatic text, technical terms, taxonomical designations, among others. Historically, these have been presented using italicized type, which is the original source of the i tag naming of this element.</p>
+    </div>
+
+    <div>
+        <u>u tag :The Unarticulated Annotation (Underline) element</u>
+        <p>The u tag HTML element represents a span of inline text which should be rendered in a way that indicates that it has a non-textual annotation. This is rendered by default as a simple solid underline, but may be altered using CSS.</p>
+    </div>
+
+    <div>
+        <p>The select tag HTML element represents a control that provides a menu of options.</p>
+        <label for="chooseCar">Choose car</label>
+        <select name="car" id="chooseCar">
+            <option value="volvo">volvo</option>
+            <option value="nano">Nano</option>
+            <option value="Fortuner">Fortuner</option>
+            <option value="scorpio">scorpio</option>
+            <option value="lamborghini">Lamborghini </option>
+        </select>
+        <label for="hr-select">Your favorite food</label> <br />
+
+        <select name="foods" id="hr-select">
+        <option value="">Choose a food</option>
+        <hr />
+        <optgroup label="Fruit">
+            <option value="cherry">Cherries</option>
+            <option value="damson">Damsons</option>
+        </optgroup>
+        <hr />
+        <optgroup label="Vegetables">
+            <option value="artichoke">Artichokes</option>
+            <option value="broccoli">Broccoli</option>
+        </optgroup>
+        <hr />
+        <optgroup label="Meat">
+            <option value="beef">Beef</option>
+            <option value="chicken">Chicken</option>
+        </optgroup>
+        <hr />
+        <optgroup label="Fish">
+            <option value="cod">Cod</option>
+            <option value="haddock">Haddock</option>
+        </optgroup>
+        </select>
+        <br>
+        <br>
+        <br>
+        <label>
+            Please choose one or more pets:
+            <select name="pets" multiple size="4">
+              <optgroup label="4-legged pets">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="hamster" disabled>Hamster</option>
+              </optgroup>
+              <optgroup label="Flying pets">
+                <option value="parrot">Parrot</option>
+                <option value="macaw">Macaw</option>
+                <option value="albatross">Albatross</option>
+              </optgroup>
+            </select>
+          </label>
+          
+    </div>
+
+    <div>
+        <button>Button Element</button>
+        <p>The button HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. Once activated, it then performs an action, such as submitting a form or opening a dialog.</p>
+    </div>
+
+    <div>
+        <hr>hr: The Thematic Break (Horizontal Rule) element.
+        <p>The hr HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.</p>
+    </div>
+
+    <div>
+        <br>br: The Line Break element</br>
+        <p>The br HTML element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</p>
+        <p>Note: Do not use br> to create margins between paragraphs; wrap them in p> elements and use the CSS margin property to control their size.</p>
+    </div>
+
+    <div>
+        <em>em- to denote stress emphasis <br><br>
+        <b>b-  to draw attention to text<br><br>
+        <mark>mark -  to mark key words or phrases<br><br>
+        <strong>strong - to indicate that text has strong importance<br><br>
+        <cite>cite - to mark the titles of books or other publications<br><br>
+        <i>i- to denote technical terms, transliterations, thoughts, or names of vessels in Western texts
+    </div>
+    </div>
+
+
+</body>
+</html>
