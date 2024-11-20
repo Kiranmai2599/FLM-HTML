@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 Assignment</title>
+    <style>
+        table,tr,td {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 2 Assignment 7th Question.</h1>
+    <div>
+        <p>Create a Complex Form Layout with Nested Tables and Lists
+            Write an HTML document that contains a form structured within a nested table layout. The form
+            should include:
+            1. A main table with two rows and two columns.
+            2. The first row should have:
+            ○ A nested table in the first cell with three rows and two columns, including:
+            ■ Text input for the user's first name and last name.
+            ■ A select dropdown for the user's country.
+            ○ An unordered list in the second cell with at least three items.
+            3. The second row should have:
+            ○ A text area for comments in the first cell.
+            ○ A submit button and a reset button in the second cell.
+            </p>
+    </div>
+    <div >
+        <form style="width: 80%;">
+            <table>
+                <tr>
+                    <td>
+                        <table>
+                            <tr>
+                                <td><label for="firstname">First Name</label></td>
+                                <td><input id="firstname" type="text"/></td>
+                            </tr>
+                            <tr>
+                                <td><label for="lastname">Last Name</label></td>
+                                <td><input id="lastname" type="text"/></td>
+                            </tr><tr>
+                                <td>Select country</td>
+                                <td><select>
+                                    <option>India</option>
+                                    <option>America</option>
+                                    <option>United Kingdom</option>
+                                    <option>China</option>
+                                    <option>Africa</option>
+                                </select></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><textarea></textarea></td>
+                    <td>
+                        <button>Submit</button>
+                        <button>Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
