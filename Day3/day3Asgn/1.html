@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2 continuation</title>
+</head>
+<body>
+    <div>
+        <p>1. Text input for the user's full name.
+            2. Email input for the user's email address.
+            3. Password input for the user's password.
+            4. Confirm password input.
+            5. Date input for the user's birthdate.
+            6. Dropdown for selecting gender (options: Male, Female, Other).
+            7. Radio buttons for subscription options (Free, Basic, Premium).
+            8. Checkboxes for selecting hobbies (e.g., Reading, Traveling, Coding, Sports).
+            9. A file input to upload a profile picture.
+            10. A submit button.</p>
+    </div>
+
+    <div>
+        <form>
+            <label for="name">Name:</label><br>
+            <input id="name" type="text" placeholder="Enter Name"/><br>
+            <label for="email">Email</label><br>
+            <input id="email" type="email" placeholder="Enter Email" required/><br>
+            <label for="password">Password</label> <br>
+            <input maxlength="20" id="password" type="password" placeholder="Enter Password" required/><br>
+            <label for="confirmPassword">confirm Password</label> <br>
+            <input maxlength="20" id="confirmPassword" type="password" placeholder="Enter confirmPassword" required/><br>
+            <label for="date">Birth Date</label><br>
+            <input type="date" id="date" min="2006-11-20" max="2024-11-20" required/> <br>
+            <select id="gender" name="Choose gender">
+                <option selected>Select your gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <br>
+            <label for="free"><input value="free" name="subscription"  type="radio" id="free"/>Free</label>
+            <label for ="basic"><input name="subscription"  value="basic" type="radio" id="basic"/>Basic</label>
+            <label for ="premium"><input name="subscription"  value="premium" type="radio" id="premium"/>Premium</label>
+            <p>Hobbies:</p>
+            <input id="reading" value="reading" type="checkbox"/>
+            <label for="reading">Reading</label><br>
+            <input id="travelling" value="travelling" type="checkbox"/>
+            <label for="travelling">Travelling</label><br>
+            <input id="coding" value="coding" type="checkbox"/>
+            <label for="coding">coding</label><br>
+            <input id="gardening" value="gardening" type="checkbox"/>
+            <label for="gardening">gardening</label><br>
+
+            <label for="image">Upload File:</label>
+            <input id="image" name="image" accept=".jpg, .jpeg, .png" type="file"/>
+            <br>
+            <input type="submit">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 Assignment continuation</title>
+</head>
+<body>
+    
+    
+    <form style="margin-bottom: 250px;">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Enter name"/><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter email" required/><br>
+        <label for="comments">Commments</label>
+        <textarea id="comments" rows="8" cols="99" required placeholder="Detailed Comments"></textarea><br>
+        <label for="rating">Rating</label>
+        <input oninput="getrange()" id="rating" value="6" type="range" min="0" max="10"/>Rating Value <span id="spanElement">6</span>  <br>
+        <input type="radio" name="feedbackTpye" id="compliment"/>
+        <label for="compliment">compliment</label><br>
+        <input type="radio" name="feedbackTpye" id="complaint"/>
+        <label for="complaint">complaint</label><br>
+        <input type="radio" name="feedbackTpye" id="suggestion"/>
+        <label for="suggestion">suggestion</label><br>
+        <input type="checkbox" id="agreePolicy" required />
+        <label for="agreePolicy">Agree terms and policy conditions</label> <br>
+        <a href="#policy">Read terms and policy conditions</a><br>
+        <input type="submit"/><br>
+    </form>
+</div>
+    </div>
+
+    <div id="policy" style="margin-bottom: 800px;"> 
+        <div>
+        <p>Problem 2: Detailed Feedback Form with Inline Elements<br>
+            Design a detailed feedback form with the following components:<br>
+            1. Text input for the user's name.<br>
+            2. Email input for the user's email address.<br>
+            3. Textarea for detailed comments.<br>
+            4. A range input to rate the service (from 0 to 10).<br>
+            5. Radio buttons to select the feedback type (options: Compliment, Complaint, Suggestion).<br>
+            6. A checkbox to agree to the feedback policy.<br>
+            7. An internal link to the feedback policy section at the bottom of the form.<br>
+            8. A submit button.<br>
+            Requirements:<br>
+            ● The form should have proper labels for each input field.<br>
+            ● The email field and feedback policy checkbox should be required.<br>
+            ● The textarea should have a placeholder that says "Enter your feedback here".<br>
+            ● The range input should display the selected value.<br>
+            ● The radio buttons should be aligned vertically.<br>
+            ● The internal link should jump to a section with an ID "feedback-policy".<br>
+            ● Use bold, italics, and underline text formatting within the form to emphasize important
+            instructions.</p>
+    </div></div>
+    <script src="2.js"></script>
+</body>
+</html>

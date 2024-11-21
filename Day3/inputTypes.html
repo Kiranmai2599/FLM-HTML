@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input types practice</title>
+    <style>
+      div {
+        border: 2px solid red;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="range">
+      <h13>Range:</h13>
+      <label for="volume">Volume:</label>
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="100"
+        step="10"
+        value="50"
+        oninput="document.getElementById('output').textContent = this.value;"
+      />
+      <span id="output">50</span>
+    </div>
+    <div id="inputText">
+      <h1>Input type: Text</h1>
+      <p>
+        name: Specifies the name of the input field, used to identify it when
+        submitting form data. <br />
+        value: Sets the initial value of the input field.<br />
+        maxlength: Limits the maximum number of characters the user can
+        input.<br />
+        placeholder: Displays a hint or guide text inside the text field
+        (disappears when the user starts typing).<br />
+        required: Makes the field mandatory before form submission.<br />
+        readonly: Prevents the user from editing the field.<br />
+        disabled: Disables the field, making it uneditable and unsubmitable.<br />
+        pattern: Specifies a regex pattern the input must match.<br />
+        autocomplete: Allows browsers to suggest saved inputs (e.g., on,
+        off).<br />
+      </p>
+      <form>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Max 15 characters"
+          maxlength="15"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="password">
+      <h3>Input type: Password</h3>
+      <p>
+        name: Identifies the field when submitting form data.<br />
+        maxlength: Sets the maximum number of characters allowed.<br />
+        minlength: Specifies the minimum number of characters required.<br />
+        placeholder: Provides hint text inside the field until the user types
+        something.<br />
+        required: Ensures the field is filled before form submission.<br />
+        autocomplete: Suggests saved passwords (on or off). <br />
+        pattern: Defines a regular expression for password validation (e.g.,
+        requiring specific characters or length).<br />
+      </p>
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        required
+        minlength="8"
+        maxlength="15"
+      />
+    </div>
+    <div id="email">
+      <h3>Input type: Email</h3>
+      <p>
+        name: Identifies the input field when submitting form data.<br />
+        placeholder: Displays a hint or example inside the field until the user
+        enters a value.<br />
+        required: Makes the field mandatory before form submission.<br />
+        multiple: Allows multiple email addresses separated by commas.<br />
+        maxlength: Limits the number of characters allowed.<br />
+        pattern: Custom regex for additional validation.<br />
+      </p>
+      <form>
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="example@example.com"
+          multiple
+          required
+          autofocus
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="url">
+      <h3>Input type: URL</h3>
+      <p>
+        name: Identifies the field in form data.<br />
+        placeholder: Displays a hint or example of the expected input (e.g.,
+        https://example.com).<br />
+        required: Makes the field mandatory before form submission.<br />
+        maxlength: Specifies the maximum number of characters allowed.<br />
+        pattern: Allows custom regex validation for additional rules.<br />
+        autocomplete: Suggests previously entered URLs.<br />
+      </p>
+      <label for="custom-url">Website (must include 'example'):</label>
+      <input
+        type="url"
+        id="custom-url"
+        name="custom-url"
+        placeholder="https://example.com"
+        required
+        pattern="https://.*\.example\.com"
+      />
+    </div>
+    <div id="tel">
+      <h3>Input type: Tel</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        placeholder: Provides an example or guidance on the expected phone
+        number format (e.g., +1 234-567-8900).<br />
+        required: Makes the field mandatory for form submission.<br />
+        pattern: Specifies a regex pattern to validate the phone number
+        format.<br />
+        maxlength: Limits the number of characters a user can input.<br />
+        autocomplete: Suggests previously entered phone numbers (tel for
+        telephone).
+      </p>
+      <label for="phone">Phone Number (US Format):</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="(123) 456-7890"
+        pattern="\(\d{3}\) \d{3}-\d{4}"
+        required
+        autocomplete="tel"
+      />
+    </div>
+    <div id="search">
+      <h3>Input type: search</h3>
+      <p>
+        name: Identifies the field in form submissions. placeholder: Provides a
+        hint or example of the type of query users can enter (e.g., "Search
+        here..."). required: Makes the field mandatory before the form can be
+        submitted. maxlength: Limits the number of characters the user can
+        input. autocomplete: Enables or disables search suggestions (on or off).
+        spellcheck: Enables or disables spellchecking (true or false).
+      </p>
+      <label for="search-bar">Search:</label>
+      <input
+        type="search"
+        id="search-bar"
+        name="search-bar"
+        placeholder="Search for items..."
+        autocomplete="on"
+        spellcheck="true"
+      />
+    </div>
+    <div id="number">
+      <h3>Input type: Number</h3>
+      <p>
+        name: Identifies the field in form submissions.<br />
+        min: Specifies the minimum allowed value.<br />
+        max: Specifies the maximum allowed value.<br />
+        step: Defines the intervals between valid values. For example, step="1"
+        allows integers, while step="0.1" allows decimals.
+        <br />value: Sets the initial value of the input field.<br />
+        placeholder: Displays a hint or example inside the field.<br />
+        required: Ensures the field must be filled before submission.
+      </p>
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        id="price"
+        autocomplete="off"
+        required
+        name="price"
+        min="0"
+        max="1000"
+        step="0.01"
+        placeholder="Enter price"
+      />
+    </div>
+    <div id="date">
+      <h3>Input type: date</h3>
+      <p>
+        name: Identifies the field in form submissions.<br />
+        min: Specifies the earliest selectable date (e.g., 2023-01-01).<br />
+        max: Specifies the latest selectable date (e.g., 2023-12-31).<br />
+        value: Sets the default date in the field.<br />
+        required: Ensures the field must be filled before submission.<br />
+        step: Specifies the increments (in days) for valid dates.
+      </p>
+      <label for="weekly">Select a week:</label>
+      <input type="date" id="weekly" name="weekly" step="7" />
+      <br />
+      <label for="appointment">Choose a date for your appointment:</label>
+      <input
+        type="date"
+        id="appointment"
+        name="appointment"
+        min="2024-09-09"
+        max="2024-12-31"
+      />
+    </div>
+    <div id="datetimelocal">
+      <h3>Input type: datetime-local</h3>
+      <p>
+        name: Identifies the field in form submissions.<br />
+        min: Specifies the earliest date and time (e.g., 2024-01-01T09:00).<br />
+        max: Specifies the latest date and time (e.g., 2024-12-31T18:00).<br />
+        step: Defines valid increments in seconds. For example:<br />
+        step="60" allows minute-level increments.<br />
+        step="3600" allows hourly increments.<br />
+        value: Sets the default date and time.<br />
+        required: Ensures the field must be filled before form submission.
+      </p>
+      <label for="appointment">Choose an Appointment Slot:</label>
+      <input
+        type="datetime-local"
+        id="appointment"
+        value="2024-11-21T08:30"
+        name="appointment"
+        min="2024-11-21T09:00"
+        max="2024-11-25T17:00"
+      />
+    </div>
+    <div id="month">
+      <h3>Input type: month</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        min: Specifies the earliest selectable month (e.g., 2023-01).<br />
+        max: Specifies the latest selectable month (e.g., 2025-12).<br />
+        value: Sets the default month and year.<br />
+        required: Ensures the field must be filled before submission.<br />
+        autocomplete: Suggests previously entered months (on or off).
+      </p>
+      <label for="subscription-month">Subscription Period:</label>
+      <input
+        type="month"
+        id="subscription-month"
+        name="subscription-month"
+        value="2024-11"
+        min="2024-01"
+        max="2025-12"
+        required
+      />
+    </div>
+    <div id="week">
+      <h3>Input type: week</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        min: Specifies the earliest selectable week (e.g., 2024-W01).<br />
+        max: Specifies the latest selectable week (e.g., 2025-W52).<br />
+        value: Sets the default week value.<br />
+        required: Ensures the field must be filled before submission.
+      </p>
+      <label for="availability-week">Select Availability Week:</label>
+      <input
+        type="week"
+        id="availability-week"
+        name="availability-week"
+        min="2024-W01"
+        max="2024-W52"
+        required
+        autocomplete="on"
+        value="2024-W11"
+      />
+    </div>
+    <div id="time">
+      <h3>Input type: time</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        min: Specifies the earliest time that can be selected (e.g., 09:00).<br />
+        max: Specifies the latest time that can be selected (e.g., 17:00).<br />
+        step: Defines the valid increments for the time input. For example:<br />
+        step="900" allows time increments of 15 minutes (15 * 60 = 900
+        seconds).<br />
+        step="60" allows 1-minute increments.<br />
+        value: Sets the default time in the input field.<br />
+        required: Ensures the field is filled before the form is submitted.<br />
+        autocomplete: Suggests previously entered times (on or off).
+      </p>
+      <label for="work-time">Work Hours:</label>
+      <input
+        type="time"
+        id="work-time"
+        name="work-time"
+        step="1"
+        value="14:40"
+        min="09:00"
+        max="18:00"
+        required
+      />
+    </div>
+    <div id="file">
+      <h3>Input type: file</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        accept: Specifies which file types are allowed for upload. This can be
+        set to MIME types (e.g., image/* for images) or specific file extensions
+        (e.g., .jpg, .png).<br />
+        <li>. values for accept attribute: accept="image/*", accept=".pdf"</li>
+        multiple: Allows users to select more than one file at a time. Without
+        this attribute, only one file can be selected.<br />
+        required: Ensures the user must upload a file before submitting the
+        form.<br />
+        disabled: Disables the file input field, preventing file selection.<br />
+        readonly: Specifies that the field is read-only (though this is not
+        widely supported in all browsers).<br />
+        value: Typically not used with file inputs, since the user selects the
+        file, and it’s not pre-defined.
+      </p>
+      <label for="upload-files">Upload Multiple Files:</label>
+      <input
+        type="file"
+        id="upload-files"
+        name="upload-files"
+        multiple
+        accept="image/*"
+      />
+    </div>
+    <div id="checkbox">
+      <h3>Input type: checkbox</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        value: Defines the value that will be sent to the server when the
+        checkbox is checked.<br />
+        checked: Specifies that the checkbox is selected by default (e.g.,
+        <input type="checkbox" checked />).<br />
+        disabled: Disables the checkbox, preventing the user from interacting
+        with it.<br />
+        required: Ensures that the checkbox must be checked before form
+        submission (useful for terms and conditions acceptance).<br />
+        readonly: Makes the checkbox read-only (this is not widely supported in
+        all browsers).<br />
+        autofocus: Automatically focuses on the checkbox when the page loads.<br />
+        onclick: Executes JavaScript when the checkbox is clicked.
+      </p>
+      <label for="fruits">Select your favorite fruits:</label><br />
+      <input type="checkbox" id="apple" name="fruits" value="apple" />
+      <label for="apple">Apple</label><br />
+      <input type="checkbox" id="orange" name="fruits" value="orange" checked />
+      <label for="orange">Orange</label><br />
+      <input
+        type="checkbox"
+        id="banana"
+        name="fruits"
+        value="banana"
+        disabled
+      />
+      <label for="banana">Banana</label><br />
+    </div>
+    <div id="radio">
+      <h3>Input type: radio</h3>
+      <p>
+        name: Groups radio buttons together. All radio buttons with the same
+        name attribute are part of the same group, and only one can be selected
+        at a time.<br />
+        value: Defines the value that will be sent to the server when the radio
+        button is selected. <br />
+        checked: Specifies that the radio button is selected by default (e.g.,
+        <input type="radio" checked />).<br />
+        disabled: Disables the radio button, preventing the user from
+        interacting with it.<br />
+        required: Ensures that a radio button must be selected before submitting
+        the form.<br />
+        autofocus: Automatically focuses on the radio button when the page
+        loads.
+      </p>
+      <b>Example 1:</b><br />
+      <label for="apple">Apple</label>
+      <input type="radio" id="apple" name="fruit" value="apple" checked /><br />
+      <label for="orange">Orange</label>
+      <input type="radio" id="orange" name="fruit" value="orange" /><br />
+      <label for="banana">Banana</label>
+      <input type="radio" id="banana" name="fruit" disabled value="banana" />
+      <br />
+      <b>Example 2:</b> <br />
+      <label for="subscribe-yes">Yes</label>
+      <input
+        type="radio"
+        id="subscribe-yes"
+        name="subscribe"
+        value="yes"
+      /><br />
+      <label for="subscribe-no">No</label>
+      <input type="radio" id="subscribe-no" name="subscribe" value="no" />
+    </div>
+    <div id="color">
+      <h3>Input type: color</h3>
+      <p>
+        name: Identifies the field in form submissions. <br />
+        value: Sets the default color value for the input (in hexadecimal
+        format, e.g., #ff0000).<br />
+        required: Ensures that the color input is filled before the form can be
+        submitted.<br />
+        disabled: Disables the color picker, preventing the user from
+        interacting with it.<br />
+        readonly: Makes the color input read-only, meaning the user cannot
+        modify the value.
+      </p>
+      <label for="background-color">Choose background color:</label>
+      <input
+        type="color"
+        id="background-color"
+        name="background-color"
+        value="#ffcc00"
+      />
+      <br />
+      <label for="disabled-color">This color picker is disabled:</label>
+      <input type="color" id="disabled-color" name="disabled-color" disabled />
+      <br />
+      <label for="text-color">Select a text color:</label>
+      <input type="color" id="text-color" name="text-color" required />
+    </div>
+    <div id="button">
+      <h3>Input type: button</h3>
+      <p>
+        type="button": Specifies that the input is a button, which can trigger
+        JavaScript events but won't submit the form. <br />
+        value: Defines the text that appears on the button (e.g., value="Click
+        Me"). <br />
+        name: Identifies the button in form submissions (not often used with
+        type="button").<br />
+        onclick: Defines a JavaScript function to be executed when the button is
+        clicked.<br />
+        disabled: Disables the button, preventing the user from interacting with
+        it.<br />
+        autofocus: Makes the button automatically focused when the page
+        loads.<br />
+      </p>
+      <input
+        type="button"
+        value="Click Me"
+        onclick="alert('Button clicked!')"
+      />
+      <br />
+      <input
+        type="button"
+        value="Change Color"
+        onclick="document.body.style.backgroundColor = 'lightblue'"
+      />
+
+      <br />
+      <form id="myForm">
+        <input type="text" name="username" placeholder="Username" />
+        <input
+          type="button"
+          value="Reset Form"
+          onclick="document.getElementById('myForm').reset()"
+        />
+      </form>
+    </div>
+
+    <div id="hidden">
+        <h3>Input type: hidden</h3>
+        <p>
+            The <input type="hidden"> creates an input field that is not visible to the user but can store data that will be sent with a form submission. This type of input is useful for storing values that should be included in the form data but should not be interacted with or seen by the user, such as session IDs, user preferences, or other metadata.
+            
+            </p>
+            <p>
+                The <input type="hidden"> creates an input field that is not visible to the user but can store data that will be sent with a form submission. This type of input is useful for storing values that should be included in the form data but should not be interacted with or seen by the user, such as session IDs, user preferences, or other metadata.
+                
+                type="hidden": Specifies that the input is hidden and won't be displayed to the user. <br>
+                name: The name of the input, which will be used as the key in form submissions.<br>
+                value: Defines the value that will be sent to the server when the form is submitted.</p>
+                <form action="/submit" method="POST">
+                    <input type="hidden" name="userId" value="12345" />
+                    <input type="submit" value="Submit" />
+                  </form>
+                  <p>The hidden input contains a userId with a value of 12345. When the form is submitted, this value will be sent to the server, but the user will not see it.
+                </p>
+                  
+            </div>
+  </body>
+</html>
