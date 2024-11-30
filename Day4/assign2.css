@@ -1,0 +1,14 @@
+h1{
+    color: rgb(85, 134, 226);
+    text-align: center;
+}
+h2{
+    color: rgb(85, 134, 226);
+}
+.address-details {
+    text-align: right;
+}
+h3 {
+    color: black;
+    text-transform: uppercase;
+}
